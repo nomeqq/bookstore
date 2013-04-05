@@ -18,7 +18,10 @@
         <%
             Map<String, Integer> cart;
             cart = (Map<String, Integer>) session.getAttribute("cart");
-
+            if(cart==null){
+                cart = new HashMap<String,Integer>();
+                session.setAttribute("cart", cart);
+            }
             Iterator iter = cart.entrySet().iterator();
             while (iter.hasNext()) {
                 Map.Entry entry = (Map.Entry) iter.next();
