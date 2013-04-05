@@ -14,7 +14,7 @@
     if (loggedin == null || !loggedin) {
         loggedin = new Boolean(false);
     }
-    //change once more
+    //change twice
 
     String bookname = request.getParameter("bookname");
 %>
